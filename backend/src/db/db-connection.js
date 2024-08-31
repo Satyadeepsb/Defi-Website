@@ -28,6 +28,7 @@ class DBConnection {
                 }
             }
             if (connection) {
+				console.log('DB Connected');
                 connection.release();
             }
             return
@@ -63,4 +64,5 @@ const HttpStatusCodes = Object.freeze({
 });
 
 
-module.exports = new DBConnection().query;
+const databaseConnection = new DBConnection();
+module.exports = databaseConnection.query;
