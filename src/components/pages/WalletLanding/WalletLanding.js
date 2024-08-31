@@ -14,6 +14,7 @@ import setAuthToken from "../../../utils/setAuthToken"
 import WalletVerifyModal from "../../views/WalletVerifyModal";
 import {SERVER_URL} from "../../../constants/env";
 import './WalletLanding.css'
+import UserProfileInfo from '../UserProfileInfo';
 function Launch() {
     const [t,i18n] = useTranslation();
 
@@ -114,6 +115,7 @@ function Launch() {
             <img src="/assets/img/background_main.png" />
             <div className="absolute top-0 w-full h-full flex flex-col ">
                 <Nav className="w-11/12 xl:w-5/6 m-auto " />
+                <UserProfileInfo/>
                 {(!accessMode && !createMode) ? <div className="w-5/6 lg:w-4/5 m-auto my-12 flex-grow">
                     <Row>
                         <Col xs={{offset: 1, span: 22}} md={{offset: 5, span: 14}} lg={{offset: 4, span: 16}} className="text-center header text-bold">
